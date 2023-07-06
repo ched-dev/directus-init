@@ -1,0 +1,24 @@
+{
+  "name": "directus-local",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "directus start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "extensions": "cd extensions/directus-extension-app-bundle/ && npm i && npm run dev",
+    "build": "cd extensions/directus-extension-app-bundle/ && npm i && npm run build",
+    "backup-db": "./tasks/pg_backup_db.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@directus/extensions-sdk": "^10.1.5",
+    "directus": "^10.3.0",
+    "pg": "^8.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
