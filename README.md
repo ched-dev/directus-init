@@ -1,6 +1,6 @@
 # Directus Init
 
-> A preconfigured Directus Headless CMS install with PostgreSQL, intended for extension development or self-hosting
+> A preconfigured Directus Headless CMS install with PostgreSQL - intended for extension development or self-hosting
 
 by [ched.dev](https://ched.dev)
 
@@ -10,13 +10,14 @@ Features:
 - Bash script to save database backups (run `npm run backup-db`)
 - Example bundle to add extensions to (includes hook for authentication & user creation)
 - [API Viewer Module](https://github.com/u12206050/directus-extension-api-viewer-module/releases/tag/1.1.1) included in extensions
+- [Additional Directus extensions documentation](./extension_docs/) included in this repo
 
 ## Install
 
 Steps:
-- Clone this repo into a folder with your project name
+- [Download a zip](https://github.com/ched-dev/directus-init/archive/refs/heads/main.zip) of this repo, extract it, and rename the folder to your project name and change into the new folder
 - Create a `.env` with contents from `.env.sample` and [update config options](https://docs.directus.io/self-hosted/config-options.html) as desired
-- Create your PostgreSQL DB from the command line `createdb directus`
+- Create your PostgreSQL DB wherever you plan to host or locally in CLI run `createdb directus`, then add connection options to `.env`
 - (Optional) Run the `tasks/pg_install_postgis.sql` in your database if you want to support location data
 - Run `npm install`
 - Run `npx directus bootstrap` (creates local folders and runs initial db setup; one-time step)
