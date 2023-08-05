@@ -8,7 +8,7 @@ Features:
 - Default [Directus.io](https://directus.io) ^10.3.0 installation with PostgreSQL
 - Install SQL command to support location data in PostgreSQL
 - Bash script to save database backups (run `npm run backup-db`)
-- Example bundle to add extensions to (includes hook for authentication & user creation)
+- Example bundle to add extensions to (includes example hooks for authentication & user creation)
 - [API Viewer Module](https://github.com/u12206050/directus-extension-api-viewer-module/releases/tag/1.1.1) included in extensions
 - [Additional Directus extensions documentation](./extension_docs/) included in this repo
 
@@ -19,8 +19,8 @@ Steps:
 - Create a `.env` with contents from `.env.sample` and [update config options](https://docs.directus.io/self-hosted/config-options.html) as desired
 - Create your PostgreSQL DB wherever you plan to host or locally in CLI run `createdb directus`, then add connection options to `.env`
 - (Optional) Run the `tasks/pg_install_postgis.sql` in your database if you want to support location data
-- Run `npm install`
-- Run `npx directus bootstrap` (creates local folders and runs initial db setup; one-time step)
+- Run `npm run build` (installs packages & builds extensions)
+- Run `npx directus bootstrap` (creates local folders and runs initial db one-time setup)
 - Create an `uploads` directory if you are storing locally, alternatively set the S3 config options in `.env`
 - Run `npm start` (use this each time to boot up server)
 

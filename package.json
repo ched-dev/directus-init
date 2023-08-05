@@ -7,7 +7,7 @@
     "start": "directus start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "extensions": "cd extensions/directus-extension-app-bundle/ && npm i && npm run dev",
-    "build": "cd extensions/directus-extension-app-bundle/ && npm i && npm run build",
+    "build": "npm i && cd extensions/directus-extension-app-bundle/ && npm i && npm run build",
     "backup-db": "./tasks/pg_backup_db.sh"
   },
   "keywords": [],
