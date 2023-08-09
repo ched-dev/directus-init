@@ -8,7 +8,7 @@ Features:
 - Default [Directus.io](https://directus.io) ^10.3.0 installation with PostgreSQL
 - Install SQL command to support location data in PostgreSQL
 - Bash script to save database backups (run `npm run backup-db`)
-- Example bundle to add extensions to (includes example hooks for authentication & user creation)
+- Example [extension bundle](https://docs.directus.io/extensions/bundles.html) to add extensions to (includes example hooks for authentication & user creation)
 - [API Viewer Module](https://github.com/u12206050/directus-extension-api-viewer-module/releases/tag/1.1.1) included in extensions
 - [Additional Directus extensions documentation](./extension_docs/) included in this repo
 
