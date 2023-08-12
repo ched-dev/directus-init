@@ -24,6 +24,20 @@ Steps:
 - Create an `uploads` directory if you are storing locally, alternatively set the S3 config options in `.env`
 - Run `npm start` (use this each time to boot up server)
 
+## Directus Studio Setup
+
+After you've installed everything and are running the Directus Studio, you should update a few things.
+
+**In Settings > Project Settings**  
+- Update Project Name as this will be used for email sender name
+- Update branding and style (color) to make this instance yours
+- Turn on the API Viewer Module in the sidebar (Modules > API Viewer check)
+- Set a requirement for strong passwords (Security > Auth Password Policy) & login attempts
+
+**In Settings > Roles & Permissions**  
+- Create a role for non-admin users (if needed)
+- Require 2FA on any roles you think should have it
+
 ## Extensions
 
 We've created a bundle which can hold all of your custom extensions. This approach allows you to add it's own dependencies in one place, as well as integrate into the build process easily.

@@ -8,6 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "extensions": "cd extensions/directus-extension-app-bundle/ && npm i && npm run dev",
     "build": "npm i && cd extensions/directus-extension-app-bundle/ && npm i && npm run build",
+    "snapshot": "directus schema snapshot ./snapshot.yaml",
+    "snapshot:apply": "directus schema apply ./snapshot.yaml",
+    "snapshot:apply:dry-run": "directus schema apply --dry-run ./snapshot.yaml",
+    "upgrade": "echo \"Follow these docs https://docs.directus.io/self-hosted/upgrades-migrations.html\"",
     "backup-db": "./tasks/pg_backup_db.sh"
   },
   "keywords": [],
