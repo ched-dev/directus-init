@@ -11,7 +11,7 @@
     "snapshot": "directus schema snapshot ./snapshot.yaml",
     "snapshot:apply": "directus schema apply ./snapshot.yaml",
     "snapshot:apply:dry-run": "directus schema apply --dry-run ./snapshot.yaml",
-    "upgrade": "echo \"See notes in `UPGRADE_NOTES.md` and follow these docs https://docs.directus.io/self-hosted/upgrades-migrations.html\"",
+    "upgrade": "echo \"See notes in UPGRADE_NOTES.md and follow these docs https://docs.directus.io/self-hosted/upgrades-migrations.html\"",
     "backup-db": "./tasks/pg_backup_db.sh"
   },
   "keywords": [],
