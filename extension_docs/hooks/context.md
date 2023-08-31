@@ -87,7 +87,9 @@ const user = await userService.readOne(user_id, {
 });
 ```
 
-### Exceptions: `context.exceptions`
+### Exceptions: `context.exceptions` (<= v10.3.x)
+
+> Removed in Directus v10.4. use `@directus/errors` instead
 
 Directus provides common exceptions for throwing in your extension code.
 

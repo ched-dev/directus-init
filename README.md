@@ -5,7 +5,7 @@
 by [ched.dev](https://ched.dev)
 
 Features:
-- Default [Directus.io](https://directus.io) ^10.3.0 installation with PostgreSQL
+- Default [Directus.io](https://directus.io) ^10.5.0 installation with PostgreSQL
 - Install SQL command to support location data in PostgreSQL
 - Bash script to save database backups (run `npm run backup-db`)
 - Example [extension bundle](https://docs.directus.io/extensions/bundles.html) to add extensions to (includes example hooks for authentication & user creation)
