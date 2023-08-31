@@ -177,3 +177,22 @@ filter("auth.login", async (payload, meta, context) => {
   });
 });
 ```
+
+If you want to override accountability to provide admin access for specific actions (such as inviting a user), you can pass it in when creating the service:
+
+```js
+const { services, getSchema } = context
+		
+const usersService = new services.UsersService({
+  accountability: {
+    // user: uuid | null, // access based on user
+    // role: uuid | null, // access based on role
+    admin: true, // admin access (everything)
+    // app: boolean, // app access
+  },
+  schema: await getSchema()
+})
+
+// requires admin access
+await usersService.inviteUser(email, USER_DEFAULT_ROLE_ID, INVITE_URL)
+```
