@@ -5,6 +5,7 @@
 
 | Version | Notes |
 | ------- | ----- |
+| 10.6 [^](https://github.com/directus/directus/releases/tag/v10.6.0) | Replaced vm2 with isolated-vm for sandboxing the "Run Script"-Operation in Flows (removes npm package use in Flows) [^](https://github.com/directus/directus/pull/19332), Added (JWT) operation to Flows [^](https://docs.directus.io/app/flows/operations.html#json-web-token-jwt) |
 | 10.5 [^](https://github.com/directus/directus/releases/tag/v10.5.0) | New SDK released [^](https://docs.directus.io/packages/@directus/sdk/), Supabase storage for files [^](https://docs.directus.io/self-hosted/config-options.html#supabase-supabase) |
 | 10.4 [^](https://github.com/directus/directus/releases/tag/v10.4.0) | Removed `context.exceptions` in extensions, Added `@directus/errors` instead [^](https://docs.directus.io/packages/@directus/errors/), Moved Redis env vars [^](https://github.com/directus/directus/releases/tag/v10.4.0), Drop memcached support, Beta SDK |
 | 10.3 [^](https://github.com/directus/directus/releases/tag/v10.3.0) | Added Websocket support to REST and GraphQL [^](https://docs.directus.io/guides/real-time/getting-started/) |
