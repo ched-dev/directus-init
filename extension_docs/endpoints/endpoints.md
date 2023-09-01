@@ -1,6 +1,6 @@
 # Extensions: Endpoints
 
-Endpoints are basically passed as middleware to ExpressJS under the hood. You should be familiar enough with ExpressJS to use the `router`, `req` and `res`.
+Endpoints are basically passed as middleware to ExpressJS under the hood. You should be familiar enough with ExpressJS to use the `router`, `req` and `res` APIs.
 
 ## `req` properties
 
