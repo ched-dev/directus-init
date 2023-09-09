@@ -10,6 +10,7 @@ Features:
 - Bash script to save database backups (run `npm run backup-db`)
 - Example [extension bundle](https://docs.directus.io/extensions/bundles.html) to add extensions to (includes example hooks for authentication & user creation)
 - [API Viewer Module](https://github.com/u12206050/directus-extension-api-viewer-module/releases/tag/1.1.1) included in extensions
+- [Generate Types Module](https://github.com/maltejur/directus-extension-generate-types/releases/tag/0.5.0) included in extensions
 - [Additional Directus extensions documentation](./extension_docs/) included in this repo
 
 ## Install
