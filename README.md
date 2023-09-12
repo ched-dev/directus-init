@@ -52,7 +52,7 @@ If you are developing extensions, open a second terminal to watch and rebuild wi
 
 If this repos Directus version is behind the latest, you can upgrade it following the [Directus Upgrades & Migrations Guide](https://docs.directus.io/self-hosted/upgrades-migrations.html).
 
-We've creating a [UPGRADE_NOTES.md](./UPGRADE_NOTES.md) file which outlines all the new faetures and breaking changes since v9.5.2. This will help you decide what fixes might be required once you are up-to-date.
+We've creating a [UPGRADE_NOTES.md](./UPGRADE_NOTES.md) file which outlines all the new features and breaking changes since Directus v9.5.2. This will help you decide what fixes might be required once you are up-to-date.
 
 # License
 
