@@ -2,7 +2,6 @@
 	"name": "directus-extension-app-bundle",
 	"version": "1.0.0",
 	"type": "module",
-	"dependencies": {},
 	"directus:extension": {
 		"host": "^10.1.4",
 		"type": "bundle",
@@ -32,6 +31,7 @@
 		"add": "directus-extension add"
 	},
 	"devDependencies": {
+		"@directus/errors": "^0.0.2",
 		"@directus/extensions-sdk": "^10.1.9",
 		"@types/node": "^20.3.2",
 		"typescript": "^5.1.3"

@@ -30,3 +30,15 @@ To watch and rebuild automatically, use:
 ```sh
 npm run dev
 ```
+
+## Adding NPM Packages
+
+Any NPM packages added to this bundle is available to all extensions within the bundle.
+
+To add a new package, use the command:
+
+```sh
+npm install --save-dev package-name
+```
+
+All packages are `devDependencies` since you need to build your code to a single file to use in Directus.
