@@ -1,6 +1,6 @@
 # Directus Init
 
-> A preconfigured Directus Headless CMS install with PostgreSQL - intended for extension development or self-hosting
+> A preconfigured Directus install with PostgreSQL - intended for extension development or self-hosting
 
 by [ched.dev](https://ched.dev)
 
@@ -8,9 +8,10 @@ Features:
 - Default [Directus.io](https://directus.io) ^10.5.0 installation with PostgreSQL
 - Install SQL command to support location data in PostgreSQL
 - Bash script to save database backups (run `npm run backup-db`)
+- Directus schema snapshots npm commands (run `npm run snapshot`)
 - Example [extension bundle](https://docs.directus.io/extensions/bundles.html) to add extensions to (includes example hooks for authentication & user creation)
 - [API Viewer Module](https://github.com/u12206050/directus-extension-api-viewer-module/releases/tag/1.1.1) included in extensions
-- [Generate Types Module](https://github.com/maltejur/directus-extension-generate-types/releases/tag/0.5.0) included in extensions
+- [Generate Types Module](https://github.com/maltejur/directus-extension-generate-types/releases/tag/0.5.1) included in extensions
 - [Additional Directus extensions documentation](./extension_docs/) included in this repo
 
 ## Install
@@ -22,7 +23,7 @@ Steps:
 - (Optional) Run the `tasks/pg_install_postgis.sql` in your database if you want to support location data
 - Run `npm run build` (installs packages & builds extensions)
 - Run `npx directus bootstrap` (creates local folders and runs initial db one-time setup)
-- Create an `uploads` directory if you are storing locally, alternatively set the S3 config options in `.env`
+- Create an `uploads` directory if you are storing files locally, alternatively set the S3 config options in `.env`
 - Run `npm start` (use this each time to boot up server)
 
 ## Directus Studio Setup
@@ -46,6 +47,12 @@ We've created a bundle which can hold all of your custom extensions. This approa
 See the `extensions/directus-extension-app-bundle/README.md` file to learn more about adding extensions.
 
 If you are developing extensions, open a second terminal to watch and rebuild with `npm run extensions`.
+
+## Upgrading
+
+If this repos Directus version is behind the latest, you can upgrade it following the [Directus Upgrades & Migrations Guide](https://docs.directus.io/self-hosted/upgrades-migrations.html).
+
+We've creating a [UPGRADE_NOTES.md](./UPGRADE_NOTES.md) file which outlines all the new faetures and breaking changes since v9.5.2. This will help you decide what fixes might be required once you are up-to-date.
 
 # License
 
