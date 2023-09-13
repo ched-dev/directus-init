@@ -19,7 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "@directus/extensions-sdk": "^10.1.5",
-    "directus": "^10.5.0",
+    "directus": "^10.6.0",
     "pg": "^8.11.0"
   },
   "engines": {

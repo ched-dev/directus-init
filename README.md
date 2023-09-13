@@ -5,7 +5,7 @@
 by [ched.dev](https://ched.dev)
 
 Features:
-- Default [Directus.io](https://directus.io) ^10.5.0 installation with PostgreSQL
+- Default [Directus.io](https://directus.io) ^10.6.0 installation with PostgreSQL
 - Install SQL command to support location data in PostgreSQL
 - Bash script to save database backups (run `npm run backup-db`)
 - Directus schema snapshots npm commands (run `npm run snapshot`)
@@ -33,7 +33,7 @@ After you've installed everything and are running the Directus Studio, you shoul
 **In Settings > Project Settings**  
 - Update Project Name as this will be used for email sender name
 - Update branding and style (color) to make this instance yours
-- Turn on the API Viewer Module in the sidebar (Modules > API Viewer check)
+- Turn on the API Viewer Module & Generate Types Module in the sidebar (Modules > check to enable)
 - Set a requirement for strong passwords (Security > Auth Password Policy) & login attempts
 
 **In Settings > Roles & Permissions**  
@@ -52,7 +52,7 @@ If you are developing extensions, open a second terminal to watch and rebuild wi
 
 If this repos Directus version is behind the latest, you can upgrade it following the [Directus Upgrades & Migrations Guide](https://docs.directus.io/self-hosted/upgrades-migrations.html).
 
-We've creating a [UPGRADE_NOTES.md](./UPGRADE_NOTES.md) file which outlines all the new features and breaking changes since Directus v9.5.2. This will help you decide what fixes might be required once you are up-to-date.
+We've created a [UPGRADE_NOTES.md](./UPGRADE_NOTES.md) file which outlines all the new features and breaking changes since Directus v9.5.2. This will help you decide what fixes might be required before and after you update.
 
 # License
 
