@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-color">
+	<head>
+    <title>Query Converter</title>
+		<meta charset="utf-8" />
+		<!-- <link rel="icon" href="/favicon.png" /> -->
+		<meta name="viewport" content="width=device-width" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.2/qs.min.js" integrity="sha512-vCegEXqPUYpZsTGz2lk0jaQ1psxtFeniVJACAXhMVxuoYa/N4nZkjoVFOxLwP7uGeQOoemiz7DQrIpRTj4IBPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function convertToString() {
+        const queryObjectField = document.querySelector('#queryObject')
+        const queryStringField = document.querySelector('#queryString')
+
+        if (queryObjectField.value === '') {
+          window.alert(`No value provided!`)
+          return
+        }
+
+        let json
+        try {
+          json = JSON.parse(queryObjectField.value)
+        } catch (e) {
+          window.alert(`Parse Error:\n` + e.message)
+          return
+        }
+
+        const stringValue = Qs.stringify(json, { encode: false })
+        queryStringField.value = stringValue
+      }
+      function convertToObject() {
+        const queryObjectField = document.querySelector('#queryObject')
+        const queryStringField = document.querySelector('#queryString')
+        const objectValue = Qs.parse(queryStringField.value)
+
+        let json
+        try {
+          json = JSON.stringify(objectValue, null, 2)
+        } catch (e) {
+          window.alert(`Parse Error:\n` + e.message)
+          return
+        }
+
+        queryObjectField.value = json
+      }
+    </script>
+    <style type="text/tailwindcss">
+      .textarea {
+        @apply font-mono w-[35vw] h-[20rem] p-4 border-sky-900 bg-sky-950 rounded;
+      }
+      .button {
+        @apply bg-indigo-800 py-2 px-4 w-full rounded border-0 flex-shrink ml-auto mb-4 whitespace-pre;
+      }
+      .bg-color {
+        @apply bg-gray-900 text-white;
+      }
+      .section {
+        @apply flex flex-col justify-end;
+      }
+    </style>
+	</head>
+	<body>
+		<header class="p-12">
+      <h1 class="text-2xl">Directus Query Object & Query String Converter</h1>
+      <p class="text-lg">Convert between formats for a Directus Query</p>
+    </header>
+    <main class="flex space-x-8 px-12">
+      <section class="section">
+        <textarea id="queryObject" class="textarea">{
+  "fields": "title,slug",
+  "filter": {
+    "status": {
+      "_eq": "published"
+    }
+  },
+  "limit": 3,
+  "sort": "-date_created"
+}</textarea>
+      </section>
+      <section>
+        <button onClick="convertToString()" class="button">&gt; Convert to String &gt;</button>
+        <button onClick="convertToObject()" class="button">&lt; Convert to Object &lt;</button>
+      </section>
+      <section class="section">
+        <textarea id="queryString" class="textarea">fields=title,slug&filter[status][_eq]=published&limit=3&sort=-date_created</textarea>
+      </section>
+    </main>
+	</body>
+</html>
